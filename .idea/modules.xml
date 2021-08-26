@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Guyon_App.iml" filepath="$PROJECT_DIR$/Guyon_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BirthdayApp.iml" filepath="$PROJECT_DIR$/.idea/BirthdayApp.iml" />
     </modules>
   </component>
 </project>
