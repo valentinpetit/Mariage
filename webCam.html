@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, initial-scale=1">
     <!-- Name of your awesome camera app -->
     <title>Anniversaire chez les Guyon</title>
     <!-- Link to your main style sheet-->
@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <meta itemprop="description" content="Client-side WebRTC code samples">
+    <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
 </head>
 <body class="webcam">
     <!-- Navbar -->
@@ -23,17 +30,12 @@
     </div>
 
     <<center>
-        <video id="video" width="640" height="480" autoplay></video>
+        <video id="gum-local" autoplay playsinline></video>
+        <button id="showVideo">Open camera</button>
     </center>
 
     <!-- Reference to your JavaScript file -->
-    <script>
-      var video = document.getElementById('video');
-      if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-            video.src = window.URL.createObjectURL(stream);
-            video.play();
-        });}
-    </script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
