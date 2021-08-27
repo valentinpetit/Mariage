@@ -47,3 +47,8 @@ html, body{
     margin-left:10%;
     margin-right:10%;
 }
+
+.biblio, .webcam{
+    background-image: url("img/background.jpg");
+    width: 100%
+}

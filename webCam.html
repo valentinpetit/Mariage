@@ -7,32 +7,35 @@
     <title>Anniversaire chez les Guyon</title>
     <!-- Link to your main style sheet-->
     <link rel="stylesheet" href="style.css">
-    <link rel="import" href="pages/navbar.html">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-    <body>
+    <body class="webcam">
         <!-- Navbar -->
         <div class="w3-top">
             <div class="w3-bar w3-black w3-card">
                 <a href="#/index.html" onclick="window.open('index.html', '_self');" class="w3-bar-item w3-button w3-padding-large">Accueil</a>
                 <a href="#/webCam.html" onclick="window.open('webCam.html', '_self');" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Vidéo</a>
-                <a href="#/pages/bibliothèqe.html" onclick="window.open('bibliothèqe.html', '_self');" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Bibliothèque</a>
+                <a href="#/pages/bibliotheque.html" onclick="window.open('bibliotheque.html', '_self');" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Bibliothèque</a>
             </div>
         </div>
         <!-- Camera -->
         <main id="camera">
-            <!-- Camera sensor -->
-            <canvas id="camera--sensor"></canvas>
-            <!-- Camera view -->
-            <video id="camera--view" autoplay playsinline></video>
-            <!-- Camera output -->
-            <img src="//:0" alt="" id="camera--output">
-            <!-- Camera trigger -->
-            <button id="camera--trigger">Take a picture</button>
+            <<center><video id="video" width="640" height="480" autoplay></video></center>
         </main>
-        <div id="scroll_page">
 
         </div>
         <!-- Reference to your JavaScript file -->
         <script src="app.js"></script>
+        <script>
+          var video = document.getElementById('video');
+          if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                video.src = window.URL.createObjectURL(stream);
+                video.play();
+            });}
+        </script>
     </body>
 </html>
