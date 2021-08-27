@@ -16,55 +16,33 @@
     .mySlides {display: none}
     </style>
 <body>
-
-
-<div class="homeContainer">
-    <img src="img/Mariage.jpg" id ="homePageImg" style="width:100%">
-</div>
-
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-black w3-card">
-        <a href="#/index.html" onclick="window.open('index.html', '_self');" class="w3-bar-item w3-button w3-padding-large">Accueil</a>
-        <a href="#/webCam.html" onclick="window.open('webCam.html', '_self');" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Vidéo</a>
-        <a href="#/pages/bibliotheque.html" onclick="window.open('bibliotheque.html', '_self');" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Bibliothèque</a>
-    </div>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-    <!-- The Band Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-        <h2 class="w3-wide">BIENVENUE AU 10 ANS DES GUYON</h2>
-        <p class="w3-opacity"><p><i>21 Août 2021</i></p>
-        <p class="w3-justify">Afin de garder un bon souvenir de cette magnifique journée, vous avez une mission :
-            Dans l'onglet "Vidéo", vous pourrez enregistrer un petit message vidéo via la webcam de l'ordinateur.
-            D'une durée d'environ 30 secondes, vous pourrez y exprimer tout ce qui vous amuse concernant nos hôtes.
-            Un montage final sera réalisé, et si vous le souhaitez il pourra vous être envoyé</p>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a href="#/index.html" onclick="window.open('index.html', '_self');" class="w3-bar-item w3-button w3-padding-large">Accueil</a>
+            <a href="#/webCam.html" onclick="window.open('webCam.html', '_self');" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Vidéo</a>
+            <a href="#/pages/bibliotheque.html" onclick="window.open('bibliotheque.html', '_self');" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Bibliothèque</a>
+        </div>
     </div>
 
-</div>
+    <!-- Photo Accueil -->
+    <div class="homeContainer">
+        <img src="img/Mariage.jpg" style="width:100%">
+    </div>
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+        <!-- The Band Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <h2 class="w3-wide">BIENVENUE AU 10 ANS DES GUYON</h2>
+            <p class="w3-opacity"><p><i>21 Août 2021</i></p>
+            <p class="w3-justify">Afin de garder un bon souvenir de cette magnifique journée, vous avez une mission :
+                Dans l'onglet "Vidéo", vous pourrez enregistrer un petit message vidéo via la webcam de l'ordinateur.
+                D'une durée d'environ 30 secondes, vous pourrez y exprimer tout ce qui vous amuse concernant nos hôtes.
+                Un montage final sera réalisé, et si vous le souhaitez il pourra vous être envoyé</p>
+        </div>
+    </div>
 
 </body>
 </html>
