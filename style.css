@@ -38,3 +38,12 @@ html, body{
     right: 20px;
     z-index: 2;
 }
+
+#homeImg{
+    max-width: 100%;
+}
+
+.homeContainer{
+    margin-left:10%;
+    margin-right:10%;
+}
