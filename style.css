@@ -46,5 +46,6 @@ html, body{
 
 .biblio, .webcam{
     background-image: url("img/background.jpg");
-    width: 100%;
+    background-position: center top;
+    background-size: 100% auto;
 }
