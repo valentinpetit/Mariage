@@ -40,8 +40,12 @@ html, body{
 }
 
 .homeContainer{
+    background-image: url("img/accueil.jpeg");
+    background-position: center top;
+    background-size: 100% auto;
     margin-left:10%;
     margin-right:10%;
+    background-attachment:fixed;
 }
 
 .biblio, .webcam{
