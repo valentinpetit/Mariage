@@ -1,16 +1,39 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Navbar</title>
+
+    <!-- These meta tags are not necessary for the camera to work -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Camera in browsers - pixo</title>
+
+    <!-- imports the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- imports the webpage's javascript file -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a href="#/index.html" onclick="window.open('index.html', '_self');" class="w3-bar-item w3-button w3-padding-large">Accueil</a>
-    <a href="#/webCam.html" onclick="window.open('webCam.html', '_self');" class="w3-bar-item w3-button w3-padding-large">Vidéo</a>
-    <a href="#/bibliotheque.html" onclick="window.open('bibliotheque.html', '_self');" class="w3-bar-item w3-button w3-padding-large">Bibliothèque</a>
-  </div>
-</div>
+<h1>Demo - Native camera in browsers</h1>
+
+<!-- The `label` is attached to the hidden file input -->
+<label for="cameraFileInput">
+    <span class="btn">Open camera</span>
+
+    <!-- The hidden file `input` for opening the native camera -->
+    <input
+            id="cameraFileInput"
+            type="file"
+            accept="image/*"
+            capture="environment"
+    />
+</label>
+
+<!-- displays the picture uploaded from the native camera -->
+<img id="pictureFromCamera" />
 </body>
 </html>
+view rawindex.html hosted with ❤ by GitHub
