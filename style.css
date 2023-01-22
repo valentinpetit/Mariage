@@ -39,14 +39,14 @@ html, body{
     z-index: 2;
 }
 
-.homeContainer{
+##.homeContainer{
     background-image: url("img/accueil.jpg");
     background-position: center top;
     background-size: 100% auto;
     background-attachment:fixed;
 }
 
-.biblio, .webcam{
+##.biblio, .webcam{
     background-image: url("img/background.jpg");
     background-position: center top;
     background-size: 100% auto;
