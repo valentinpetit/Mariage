@@ -29,20 +29,63 @@
 </div>
 <h1>Demo - Native camera in browsers</h1>
 
-<!-- The `label` is attached to the hidden file input -->
-<label for="cameraFileInput">
-    <span class="btn">Open camera</span>
+Valentin PETIT
+bonjour, je souhaite un fichier javascript me permettant d'ouvrir l'appareil photo d'un telephone et filmer, depuis une page html
+Voici un exemple de code JavaScript qui permet d'ouvrir l'appareil photo d'un téléphone et de filmer à partir d'une page HTML :
 
-    <!-- The hidden file `input` for opening the native camera -->
-    <input
-            id="cameraFileInput"
-            type="file"
-            accept="image/*"
-            capture="environment"
-    />
-</label>
+Copy code
+<div>
+    <video id="video"></video>
+    <button id="start-button">Commencer à filmer</button>
+    <button id="stop-button">Arrêter de filmer</button>
+</div>
 
-<!-- displays the picture uploaded from the native camera -->
-<img id="pictureFromCamera" />
+<script>
+  // Obtenir les éléments HTML
+  const video = document.getElementById('video');
+  const startButton = document.getElementById('start-button');
+  const stopButton = document.getElementById('stop-button');
+
+  // Désactiver le bouton d'arrêt de départ
+  stopButton.disabled = true;
+
+  // Demander l'accès à l'appareil photo
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+      // Afficher la vidéo de l'appareil photo
+      video.srcObject = stream;
+
+      // Activer le bouton de départ
+      startButton.disabled = false;
+
+      // Ajouter les écouteurs d'événements pour les boutons
+      startButton.addEventListener('click', () => {
+        // Démarrer la vidéo
+        video.play();
+
+        // Désactiver le bouton de départ
+        startButton.disabled = true;
+
+        // Activer le bouton d'arrêt
+        stopButton.disabled = false;
+      });
+
+      stopButton.addEventListener('click', () => {
+        // Arrêter la vidéo
+        video.pause();
+        video.currentTime = 0;
+
+        // Désactiver le bouton d'arrêt
+        stopButton.disabled = true;
+
+        // Activer le bouton de départ
+        startButton.disabled = false;
+      });
+    })
+    .catch(err => {
+      // Afficher l'erreur si l'accès à l'appareil photo est refusé
+      console.log(err.name + ": " + err.message);
+    });
+</script>
 </body>
 </html>
